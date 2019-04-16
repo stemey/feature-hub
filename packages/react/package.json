@@ -29,7 +29,7 @@
     "@types/react-test-renderer": "^16.0.3",
     "@types/url-join": "^4.0.0",
     "jest-stub-methods": "^0.2.1",
-    "react": "^16.6.3",
+    "react": "^16.8.6",
     "react-test-renderer": "^16.7.0"
   },
   "peerDependencies": {

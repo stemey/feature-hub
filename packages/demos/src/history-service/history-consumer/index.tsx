@@ -2,6 +2,7 @@ import {FeatureAppDefinition} from '@feature-hub/core';
 import {HistoryServiceV1} from '@feature-hub/history-service';
 import {ReactFeatureApp} from '@feature-hub/react';
 import * as React from 'react';
+import {Router} from 'react-router';
 import {HistoryConsumer} from './history-consumer';
 
 const inBrowser = typeof window !== 'undefined';
@@ -33,10 +34,10 @@ export const historyConsumerDefinition: FeatureAppDefinition<
 
     return {
       render: () => (
-        <HistoryConsumer history={history} idSpecifier={idSpecifier || ''} />
+        <Router history={history}>
+          <HistoryConsumer idSpecifier={idSpecifier || ''} />
+        </Router>
       )
     };
   }
 };
-
-export default historyConsumerDefinition;
